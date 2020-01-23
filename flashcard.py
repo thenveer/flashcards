@@ -23,6 +23,7 @@ def get_words(word_file="/home/muhamed/apple/ii.txt"):
 def answer_window(h):
     global k
     k=h[1]
+    print(k)
     return (k)
 
 
@@ -96,11 +97,6 @@ if __name__ == "__main__":
         but1.place(x = 10,y = 90)
 
 
-        var_2=StringVar()
-        label =Label(window, font="Times 22 bold",textvariable=var_2)
-        label.place(x=50,y=130)
-        q=answer_window(h)
-        var_2.set(q)
    
         
         but2=Button(window, text="am right",command=lambda:nClick(press=1))
@@ -124,3 +120,17 @@ if __name__ == "__main__":
             right=g[1]
             wrong=g[2]
        
+
+
+
+
+
+
+
+
+      # var_2=StringVar()
+      #   label =Label(window, font="Times 22 bold",textvariable=var_2)
+      #   label.place(x=50,y=130)
+      #   q=answer_window(h)
+      #   var_2.set(q)
+  
