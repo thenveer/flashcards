@@ -64,10 +64,10 @@ def next_guess_points(counter,right,wrong):
 
 if __name__ == "__main__":
 
-    n=0
-    if n==0:
+    turn=0
+    if turn==0:
         q=first_guess_points(3)
-    while(n<4):
+    while(turn<4):
         
         window =Tk()
         window.geometry("500x350")
@@ -113,9 +113,9 @@ if __name__ == "__main__":
 
 
         window.mainloop()
-        n+=1
+        turn+=1
        
-        if n==1:
+        if turn==1:
             c=first_guess_points(counter)
             
         else:
