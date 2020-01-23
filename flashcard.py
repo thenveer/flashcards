@@ -72,37 +72,38 @@ if __name__ == "__main__":
         
         window =Tk()
         window.geometry("500x350")
-   
+
+        #label for question
         var_1=StringVar()
         label =Label(window, font="Times 22 bold",textvariable=var_1)
         label.place(x=15,y=45)
         word=get_words()
         h=word.split()
-        
         var_1.set(h[0])
 
-                
+        #label for wrong point        
         var_4=StringVar()
         label =Label(window, font="Times 22 bold",textvariable=var_4)
         label.place(x=100,y=160)
         var_4.set(wrong)
 
+        #label for right point
         var_5=StringVar()
         label =Label(window, font="Times 22 bold",textvariable=var_5)
         label.place(x=50,y=160)
         var_5.set(right)
     
-    
+        #button for see answer
         but1=Button(window, text="see answer",command=lambda:answer_window(h))
         but1.place(x = 10,y = 90)
 
 
    
-        
+        #button for right point 
         but2=Button(window, text="am right",command=lambda:nClick(press=1))
         but2.place(x = 10,y =200)
 
-        
+        #button for wrong point
         but3=Button(window, text="am wrong",command=lambda:nClick(press=2))
         but3.place(x = 100,y =200)
     
