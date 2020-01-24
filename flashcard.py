@@ -1,6 +1,8 @@
 from tkinter import *
 import random
 
+import sys
+
 def get_words(word_file="/home/muhamed/apple/pineapple/ii.txt"):
     good_word = []
     with open(word_file) as f:
@@ -56,13 +58,10 @@ def next_guess_points(counter,right,wrong):
 
 
 
-if __name__ == "__main__":
 
-    turn=0
-    if turn==0:
-        q=first_guess_points(3)
-    while(turn<4):
-        
+if __name__ == "__main__":
+    q=first_guess_points(3)
+    for _ in range(4):
         window =Tk()
         window.geometry("500x350")
 
@@ -70,7 +69,7 @@ if __name__ == "__main__":
         var_1=StringVar()
         label =Label(window, font="Times 22 bold",textvariable=var_1)
         label.place(x=15,y=45)
-        word=get_words()
+        word=get_words(sys.argv[1])
         h=word.split()
         var_1.set(h[0])
 
@@ -85,7 +84,7 @@ if __name__ == "__main__":
         label =Label(window, font="Times 22 bold",textvariable=var_5)
         label.place(x=50,y=160)
         var_5.set(right)
-    
+
         #button for see answer
         but1=Button(window, text="see answer",command=lambda:answer_window(h))
         but1.place(x = 10,y = 90)
@@ -103,28 +102,13 @@ if __name__ == "__main__":
         label1.place(x=150,y=300)
 
         window.mainloop()
-        turn+=1
-       
+
         if turn==1:
             c=first_guess_points(counter)
-            
+
         else:
             g=next_guess_points(counter,right,wrong)
             counter=counter
             right=g[1]
             wrong=g[2]
-       
 
-
-
-
-
-
-
-
-      # var_2=StringVar()
-      #   label =Label(window, font="Times 22 bold",textvariable=var_2)
-      #   label.place(x=50,y=130)
-      #   q=answer_window(h)
-      #   var_2.set(q)
-  
