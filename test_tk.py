@@ -1,4 +1,4 @@
-from flashcard import get_words,answer_window,nClick,first_guess_points,next_guess_points
+from tk import get_words,nClick,first_guess_points,next_guess_points
 def test_correct_word():
     with open("/tmp/words.txt","w") as f:
         for i in ["get the one", "words  t wo", "word three"]:
@@ -6,15 +6,6 @@ def test_correct_word():
     selected_word = get_words('/tmp/words.txt')
     assert selected_word == 'word three'
 
-# def test_when_click_answer():
-#     with open("/tmp/words.txt","w") as f:
-#         for i in ["two"]:
-#             f.write(i+"\n")
-#     answer_window = get_words('/tmp/words.txt')
-#     assert answer_window == 'two'
-def test_when_click_answer():
-    h=['kk','oo']
-    assert answer_window(h) == 'oo'
 
 def test_right_button_pressed():
     press=1
@@ -58,6 +49,15 @@ def test_again_wrong_point():
     right=1
     wrong=1
     assert next_guess_points(counter,right,wrong) == (2,1,2)
+
+
+
+
+
+
+
+
+
 
 
 
