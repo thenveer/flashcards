@@ -1,8 +1,7 @@
 from tkinter import *
 import random
 
-
-def get_words(word_file="/home/muhamed/apple/ii.txt"):
+def get_words(word_file="/home/muhamed/apple/pineapple/ii.txt"):
     good_word = []
     with open(word_file) as f:
         for word in f:
@@ -12,17 +11,13 @@ def get_words(word_file="/home/muhamed/apple/ii.txt"):
             #print(words)
             if int(len(word.split())) < 3:
                 good_word.append(word)
-                
-            
-
     word =random.choice(good_word)
-   
     return word
 
 def answer_window(h):
     var_1=StringVar()
     label =Label(window, font="Times 22 bold",textvariable=var_1)
-    label.place(x=25,y=125)
+    label.place(x=50,y=130)
     var_1.set(h[1])
 
 
@@ -30,7 +25,6 @@ def nClick(press):
     if press==1:
         global counter
         counter = 1
-        
     elif press==2:
         counter = 2
     return counter
@@ -96,8 +90,6 @@ if __name__ == "__main__":
         but1=Button(window, text="see answer",command=lambda:answer_window(h))
         but1.place(x = 10,y = 90)
 
-
-   
         #button for right point 
         but2=Button(window, text="am right",command=lambda:nClick(press=1))
         but2.place(x = 10,y =200)
@@ -107,8 +99,8 @@ if __name__ == "__main__":
         but3.place(x = 100,y =200)
 
         #lebal for next question
-        label1=Label(window,text = "press close button to next question")
-        label1.place(x=150,y=250)
+        label1=Label(window,text = "press close button for next question")
+        label1.place(x=150,y=300)
 
         window.mainloop()
         turn+=1
