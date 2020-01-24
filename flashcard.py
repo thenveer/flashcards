@@ -114,17 +114,4 @@ if __name__ == "__main__":
             right=g[1]
             wrong=g[2]
        
-
-
-
-
-
-
-
-
-      # var_2=StringVar()
-      #   label =Label(window, font="Times 22 bold",textvariable=var_2)
-      #   label.place(x=50,y=130)
-      #   q=answer_window(h)
-      #   var_2.set(q)
   
