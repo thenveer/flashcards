@@ -3,5 +3,5 @@ its a flashcards game,here a data file contain flashcard that contain question a
 
 # Usage
 
-Here tkinter is used
+tkinter is used for button and label.
 
