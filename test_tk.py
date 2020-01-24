@@ -1,4 +1,4 @@
-from tk import get_words,nClick,first_guess_points,next_guess_points
+from flashcard import get_words,nClick,first_guess_points,next_guess_points
 def test_correct_word():
     with open("/tmp/words.txt","w") as f:
         for i in ["get the one", "words  t wo", "word three"]:
