@@ -20,10 +20,10 @@ def get_words(word_file="/home/muhamed/apple/ii.txt"):
     return word
 
 def answer_window(h):
-    global k
-    k=h[1]
-    print(k)
-    return (k)
+    var_1=StringVar()
+    label =Label(window, font="Times 22 bold",textvariable=var_1)
+    label.place(x=25,y=125)
+    var_1.set(h[1])
 
 
 def nClick(press):
