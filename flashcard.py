@@ -105,8 +105,10 @@ if __name__ == "__main__":
         #button for wrong point
         but3=Button(window, text="am wrong",command=lambda:nClick(press=2))
         but3.place(x = 100,y =200)
-    
 
+        #lebal for next question
+        label1=Label(window,text = "press close button to next question")
+        label1.place(x=150,y=250)
 
         window.mainloop()
         turn+=1
