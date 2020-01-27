@@ -57,7 +57,6 @@ def next_guess_points(counter,right,wrong):
     return (counter,right ,wrong)
 
 
-
 if __name__ == "__main__":
 
     turn=0
@@ -114,19 +113,5 @@ if __name__ == "__main__":
             g=next_guess_points(counter,right,wrong)
             counter=counter
             right=g[1]
-            wrong=g[2]
-       
+            wrong=g[2]       
 
-
-
-
-
-
-
-
-      # var_2=StringVar()
-      #   label =Label(window, font="Times 22 bold",textvariable=var_2)
-      #   label.place(x=50,y=130)
-      #   q=answer_window(h)
-      #   var_2.set(q)
-  
