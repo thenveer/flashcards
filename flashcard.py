@@ -1,7 +1,9 @@
 from tkinter import *
+from sys import argv
+script,n=argv
 import random
 
-def get_words(word_file="/home/muhamed/apple/pineapple/ii.txt"):
+def get_words(word_file=n):
     good_word = []
     with open(word_file) as f:
         for word in f:
