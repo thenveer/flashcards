@@ -28,8 +28,6 @@ def nClick(press):
 def first_guess_points(counter):
     global right
     global wrong     
-    right=0
-    wrong=0
     if counter==1:
         right+=1
     elif counter==2:        
@@ -39,24 +37,15 @@ def first_guess_points(counter):
         wrong=0
         
     return (counter,right ,wrong)
-def next_guess_points(counter,right,wrong):
-    counter=counter
-    right=right
-    wrong=wrong
-    if counter==1:
-        right+=1
-    elif counter==2:        
-        wrong+=1
-        
-    return (counter,right ,wrong)
 
 
-if __name__ == "__main__":
+def main():
 
     turn=0
     if turn==0:
         q=first_guess_points(3)
-    while(turn<4):
+        turn+=1
+    for i in range(5):
         
         window =Tk()
         window.geometry("500x350")
@@ -109,15 +98,6 @@ if __name__ == "__main__":
         
         c=first_guess_points(counter)
       
-        window.mainloop()
-        turn+=1
-       
-        if turn==1:
-            c=first_guess_points(counter)
-            
-        else:
-            g=next_guess_points(counter,right,wrong)
-            counter=counter
-            right=g[1]
-            wrong=g[2]       
 
+if __name__ == "__main__":
+    main()
