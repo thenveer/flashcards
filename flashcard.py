@@ -16,12 +16,6 @@ def get_words(word_file=n):
     word =random.choice(good_word)
     return word
 
-def answer_window(h):
-    var_1=StringVar()
-    label =Label(window, font="Times 22 bold",textvariable=var_1)
-    label.place(x=50,y=130)
-    var_1.set(h[1])
-
 
 def nClick(press):
     if press==1:
@@ -86,7 +80,14 @@ if __name__ == "__main__":
         label =Label(window, font="Times 22 bold",textvariable=var_5)
         label.place(x=50,y=160)
         var_5.set(right)
-    
+
+        def answer_window(h):
+            var_1=StringVar()
+            label =Label(window, font="Times 22 bold",textvariable=var_1)
+            label.place(x=50,y=130)
+            var_1.set(h[1])
+
+        
         #button for see answer
         but1=Button(window, text="see answer",command=lambda:answer_window(h))
         but1.place(x = 10,y = 90)
@@ -99,10 +100,15 @@ if __name__ == "__main__":
         but3=Button(window, text="am wrong",command=lambda:nClick(press=2))
         but3.place(x = 100,y =200)
 
-        #lebal for next question
-        label1=Label(window,text = "press close button for next question")
-        label1.place(x=150,y=300)
+        def close_window():
+            window.destroy()
 
+        button=Button(text = "next question", command = close_window)
+        button.place(x=150,y=300)
+        window.mainloop()
+        
+        c=first_guess_points(counter)
+      
         window.mainloop()
         turn+=1
        
